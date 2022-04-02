@@ -5,10 +5,13 @@
     <button id="counter" @click="increment">increment</button>
     {{count}}
     <button @click="decrement">decrement</button>
+    <br />
+    <ComputedSample/>
   </div>
 </template>
 
 <script>
+import ComputedSample from "@/components/ComputedSample";
 
 export default {
   name: 'HelloWorld',
@@ -21,6 +24,9 @@ export default {
       someObject: {},
       // handleClick,
     }
+  },
+  components: {
+    ComputedSample
   },
   mounted() {
     const newObject = {}
