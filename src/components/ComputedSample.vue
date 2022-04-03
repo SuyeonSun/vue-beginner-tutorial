@@ -26,9 +26,6 @@ export default {
       lastName: 'Doe',
     }
   },
-  watch: {
-
-  },
   methods: {
     setPublishedBooksMessage() {
       console.log(this.author.books) // get

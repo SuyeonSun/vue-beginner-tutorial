@@ -2,16 +2,18 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
 
-    <button id="counter" @click="increment">increment</button>
-    {{count}}
-    <button @click="decrement">decrement</button>
+<!--    <button id="counter" @click="increment">increment</button>-->
+<!--    {{count}}-->
+<!--    <button @click="decrement">decrement</button>-->
     <br />
     <ComputedSample/>
+<!--    <WatchSample></WatchSample>-->
   </div>
 </template>
 
 <script>
 import ComputedSample from "@/components/ComputedSample";
+// import WatchSample from "@/components/WatchSample";
 
 export default {
   name: 'HelloWorld',
@@ -20,20 +22,20 @@ export default {
   },
   data() {
     return {
-      count : 0,
-      someObject: {},
-      // handleClick,
+      // count : 0,
+      // someObject: {},
     }
   },
   components: {
+    // WatchSample,
     ComputedSample
   },
-  mounted() {
-    const newObject = {}
-    this.someObject = newObject
-    console.log(newObject === this.someObject) // false
-    console.log("on mounted!") // false
-  },
+  // mounted() {
+  //   const newObject = {}
+  //   this.someObject = newObject
+  //   console.log(newObject === this.someObject) // false
+  //   console.log("on mounted!") // false
+  // },
 
   // 관심사를 분리한다.
   methods : {
