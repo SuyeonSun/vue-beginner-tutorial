@@ -1,17 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home">
+    <input type="text" v-model="test2">
+    <HelloWorld/>
+  </div>
 </template>
 
 <script>
+import {Options, Vue} from 'vue-class-component';
 import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
+@Options({
+  provide() {
+    return {
+      test: this.test2,
+    };
+  },
+  data() {
+    return {
+      test2: "etst2",
+    };
+  },
   components: {
     HelloWorld
   }
-}
+})
+
+export default class Test extends Vue {}
 </script>
 
 <style>
